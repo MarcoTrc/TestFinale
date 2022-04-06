@@ -12,21 +12,12 @@ public class Prodotto {
     private Long id;
     private String nome;
     private float prezzo;
-    private float peso;
     private Date datadiscadenza;
 
     public Prodotto(Long id, String nome, float prezzo, float peso, Date datadiscadenza) {
         this.id = id;
         this.nome = nome;
         this.prezzo = prezzo;
-        this.peso = peso;
-        this.datadiscadenza = datadiscadenza;
-    }
-
-    public Prodotto(String nome, float prezzo, float peso, Date datadiscadenza) {
-        this.nome = nome;
-        this.prezzo = prezzo;
-        this.peso = peso;
         this.datadiscadenza = datadiscadenza;
     }
 
@@ -66,14 +57,6 @@ public class Prodotto {
 
     public void setPrezzo(float prezzo) {
         this.prezzo = prezzo;
-    }
-
-    public float getPeso() {
-        return peso;
-    }
-
-    public void setPeso(float peso) {
-        this.peso = peso;
     }
 
     public Date getDatadiscadenza() {
