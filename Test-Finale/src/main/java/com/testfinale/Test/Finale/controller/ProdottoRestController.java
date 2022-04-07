@@ -60,13 +60,13 @@ public class ProdottoRestController {
     @RequestMapping(path = "/prodotti/ricerca/prezzo/min",
 
             method = RequestMethod.GET)
-    public List<Prodotto> trovaProdottiPerPrezzo(
+    public List<Prodotto> ricercaProdottiPerPrezzo(
             @RequestParam(name="min")
                     Float min){
         return repository.
                 findByPrezzoLessThan(min);
-
     }
+
     @DeleteMapping("/prodotto/{id}")
     void eliminaProdotto(@PathVariable Long id){
         repository.deleteById(id);
